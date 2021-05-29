@@ -1,38 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Alert /> should render alert with type 1`] = `
-<button
-  class="popover-children"
->
-  top
-</button>
-`;
-
-exports[`<Alert /> should render alert with type 2`] = `
-<button
-  class="popover-children"
->
-  right
-</button>
-`;
-
-exports[`<Alert /> should render alert with type 3`] = `
-<button
-  class="popover-children"
->
-  bottom
-</button>
-`;
-
-exports[`<Alert /> should render alert with type 4`] = `
-<button
-  class="popover-children"
->
-  left
-</button>
-`;
-
-exports[`<Alert /> should render default 1`] = `
+exports[`<Popover /> should render default 1`] = `
 <div>
   <div
     class="lsbcc-popover"
@@ -72,4 +40,36 @@ exports[`<Alert /> should render default 1`] = `
     </button>
   </div>
 </div>
+`;
+
+exports[`<Popover /> should render popover with placement 1`] = `
+<button
+  class="popover-children"
+>
+  top
+</button>
+`;
+
+exports[`<Popover /> should render popover with placement 2`] = `
+<button
+  class="popover-children"
+>
+  right
+</button>
+`;
+
+exports[`<Popover /> should render popover with placement 3`] = `
+<button
+  class="popover-children"
+>
+  bottom
+</button>
+`;
+
+exports[`<Popover /> should render popover with placement 4`] = `
+<button
+  class="popover-children"
+>
+  left
+</button>
 `;

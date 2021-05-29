@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> should render default 1`] = `
+<div>
+  <div
+    class="lsbcc-pagination"
+  >
+    <ul
+      class="pages-inner"
+    >
+      <li
+        class="page btn disabled"
+      >
+        <span>
+          &lt;
+        </span>
+      </li>
+      <li
+        class="page btn disabled"
+      >
+        <span>
+          &gt;
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

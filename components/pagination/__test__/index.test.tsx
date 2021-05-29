@@ -1,40 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { render } from '@testing-library/react';
 import Pagination from '../pagination';
 
-const title = 'Title';
-const content = (
-  <div>
-    <p>Hover me</p>
-    <p>Hover me</p>
-  </div>
-)
-
 describe('<Pagination />', () => {
+  const current = 1;
+
   test('should render default', () => {
     const { container } = render(
-      <Popover title={title} content={content}>
+      <Pagination pageSize={10} onChange={console.log} current={current}>
         <button>left</button>
-      </Popover>
+      </Pagination>
     );
     expect(container).toMatchSnapshot();
-  });
-
-  test('should render popover with placement', () => {
-    const placements: any[] = ['top', 'right', 'bottom', 'left'];
-
-    const { getByText } = render(
-      <>
-        {placements.map(t => (
-          <Popover key={t} placement={t} title={title} content={content}>
-            <button>{t}</button>
-          </Popover>
-        ))}
-      </>,
-    );
-
-    placements.forEach(t => {
-      expect(getByText(t)).toMatchSnapshot();
-    });
   });
 });
