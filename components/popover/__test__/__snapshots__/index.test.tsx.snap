@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> should render alert with type 1`] = `
+<button
+  class="popover-children"
+>
+  top
+</button>
+`;
+
+exports[`<Alert /> should render alert with type 2`] = `
+<button
+  class="popover-children"
+>
+  right
+</button>
+`;
+
+exports[`<Alert /> should render alert with type 3`] = `
+<button
+  class="popover-children"
+>
+  bottom
+</button>
+`;
+
+exports[`<Alert /> should render alert with type 4`] = `
+<button
+  class="popover-children"
+>
+  left
+</button>
+`;
+
+exports[`<Alert /> should render default 1`] = `
+<div>
+  <div
+    class="lsbcc-popover"
+  >
+    <div
+      class="popover-container left hide"
+    >
+      <div
+        class="popover-main"
+      >
+        <div
+          class="popover-title"
+        >
+          Title
+        </div>
+        <div
+          class="popover-content"
+        >
+          <div>
+            <p>
+              Hover me
+            </p>
+            <p>
+              Hover me
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="arrow left"
+      />
+    </div>
+    <button
+      class="popover-children"
+    >
+      left
+    </button>
+  </div>
+</div>
+`;
