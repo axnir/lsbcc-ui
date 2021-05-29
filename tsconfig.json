@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+     "lsbcc-ui": ["components/index.ts"],
+     "lsbcc-ui/esm/*": ["components/*"],
+     "lsbcc-ui/lib/*": ["components/*"]
+     },
     "target": "esnext",
     "module": "commonjs",
     "jsx": "react",
@@ -13,5 +18,5 @@
     "resolveJsonModule": true
   },
   "include": ["components", "global.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "components/**/demo", "components/**/__tests__"]
 }

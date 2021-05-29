@@ -1,0 +1,30 @@
+---
+name: Pagination 分页器
+route: /Pagination
+menu: 组件
+---
+
+import { LsbccBox } from '../../doc-comps';
+import BasicDemo from './demo';
+import BasicDemoCode from '!raw-loader!./demo';
+
+# Pagination 分页器
+
+分页器，采用分页的形式分隔长列表，每次只加载一个页面。
+
+## 代码演示
+
+### 基本用法
+
+<LsbccBox code={BasicDemoCode} title="基本用法" desc="采用分页的形式分隔长列表，每次只加载一个页面">
+ <BasicDemo />
+</LsbccBox>
+
+## API
+
+|    属性   | 说明     | 类型            | 默认值 |
+| -------- | -------- | -------------- | ------ |
+|  total   | 数据总数 |     number      |    0   |
+| pageSize | 每页条数 |     number      |    -   |
+| current  | 当前页数 |     number      |    -   |
+| onChange| 页码改变的回调，参数是改变后的页码 | function (page) | - |
