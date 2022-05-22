@@ -1,6 +1,8 @@
 import React from 'react';
 import Popover from 'lsbcc-ui/lib/popover';
+import Button from 'lsbcc-ui/lib/button';
 import 'lsbcc-ui/lib/popover/style';
+import 'lsbcc-ui/lib/button/style';
 
 const content = (
   <div>
@@ -14,7 +16,7 @@ const title = 'Title';
 export default () => (
   <div className="App">
     <Popover title={title} content={content} placement="right">
-      <button>Hover me</button>
+      <Button>Hover me</Button>
     </Popover>
   </div>
 );

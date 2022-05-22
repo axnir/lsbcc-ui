@@ -1,0 +1,29 @@
+---
+name: Button 按钮
+route: /Button
+menu: 组件
+---
+
+import { LsbccBox } from '../../doc-comps';
+import BasicDemo from './demo';
+import BasicDemoCode from '!raw-loader!./demo';
+
+# Button 按钮
+
+开始一个即时操作。
+
+## 代码演示
+
+### 基本用法
+
+<LsbccBox code={BasicDemoCode} title="基本用法" desc="响应用户点击行为，触发相应的业务逻辑。">
+  <BasicDemo />
+</LsbccBox>
+
+## API
+
+| 属性     | 说明                 | 类型                         | 默认值 |
+| -------- | -------------------- | ---------------------------- | ------ |
+| size     | 可选，按钮大小       | "large" / "middle" / "small" | middle |
+| disbaled | 可选，按钮失效状态   | boolean                      | false  |
+| onClick  | 可选，点击事件的回调 | (event) => void              | -      |
