@@ -1,9 +1,9 @@
-const gulp = require('gulp')
-const babel = require('gulp-babel')
-const less = require('gulp-less')
-const autoprefixer = require('gulp-autoprefixer')
-const cssnano = require('gulp-cssnano')
-const through2 = require('through2')
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+const less = require('gulp-less');
+const autoprefixer = require('gulp-autoprefixer');
+const cssnano = require('gulp-cssnano');
+const through2 = require('through2');
 
 const paths = {
   dest: {
@@ -16,8 +16,8 @@ const paths = {
     'components/**/*.{ts,tsx}',
     '!components/**/demo/*.{ts,tsx}',
     '!components/**/__tests__/*.{ts,tsx}',
-    ],
-}
+  ],
+};
 
 /**
  * 当前组件样式 import './index.less' => import './index.css'
@@ -29,7 +29,7 @@ function cssInjection (content) {
   return content
     .replace(/\/style\/?'/g, "/style/css'")
     .replace(/\/style\/?"/g, '/style/css"')
-    .replace(/\.less/g, '.css')
+    .replace(/\.less/g, '.css');
 }
 
 /**
@@ -38,43 +38,43 @@ function cssInjection (content) {
  * @param {*} destDir 目标目录
  */
 function compileScripts (babelEnv, destDir) {
-  const { scripts } = paths
-  process.env.BABEL_ENV = babelEnv
+  const { scripts } = paths;
+  process.env.BABEL_ENV = babelEnv;
   return gulp
     .src(scripts)
     .pipe(babel()) // 使用gulp-babel处理
     .pipe(
       through2.obj(function z (file, encoding, next) {
-        this.push(file.clone())
+        this.push(file.clone());
         // 找到目标
         if (file.path.match(/(\/|\\)style(\/|\\)index\.js/)) {
-          const content = file.contents.toString(encoding)
-          file.contents = Buffer.from(cssInjection(content)) // 文件内容处理
-          file.path = file.path.replace(/index\.js/, 'css.js') // 文件重命名
-          this.push(file) // 新增该文件
-          next()
+          const content = file.contents.toString(encoding);
+          file.contents = Buffer.from(cssInjection(content)); // 文件内容处理
+          file.path = file.path.replace(/index\.js/, 'css.js'); // 文件重命名
+          this.push(file); // 新增该文件
+          next();
         } else {
-          next()
+          next();
         }
       }),
     )
-    .pipe(gulp.dest(destDir))
+    .pipe(gulp.dest(destDir));
 }
 
 /**
  * 编译cjs
  */
 function compileCJS () {
-  const { dest } = paths
-  return compileScripts('cjs', dest.lib)
+  const { dest } = paths;
+  return compileScripts('cjs', dest.lib);
 }
 
 /**
  * 编译esm
  */
 function compileESM () {
-  const { dest } = paths
-  return compileScripts('esm', dest.esm)
+  const { dest } = paths;
+  return compileScripts('esm', dest.esm);
 }
 
 /**
@@ -84,7 +84,7 @@ function copyLess () {
   return gulp
     .src(paths.styles)
     .pipe(gulp.dest(paths.dest.lib))
-    .pipe(gulp.dest(paths.dest.esm))
+    .pipe(gulp.dest(paths.dest.esm));
 }
 
 /**
@@ -97,15 +97,15 @@ function less2css () {
     .pipe(autoprefixer()) // 根据browserslistrc增加前缀
     .pipe(cssnano({ zindex: false, reduceIdents: false })) // 压缩
     .pipe(gulp.dest(paths.dest.lib))
-    .pipe(gulp.dest(paths.dest.esm))
+    .pipe(gulp.dest(paths.dest.esm));
 }
 
 // 串行执行编译脚本任务（cjs,esm） 避免环境变量影响
-const buildScripts = gulp.series(compileCJS, compileESM)
+const buildScripts = gulp.series(compileCJS, compileESM);
 
 // 整体并行执行任务
-const build = gulp.parallel(buildScripts, copyLess, less2css)
+const build = gulp.parallel(buildScripts, copyLess, less2css);
 
-exports.build = build
+exports.build = build;
 
-exports.default = build
+exports.default = build;

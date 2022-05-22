@@ -15,7 +15,8 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true
   },
   "include": ["components", "global.d.ts"],
   "exclude": ["types", "node_modules", "lib", "esm"]
