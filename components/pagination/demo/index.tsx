@@ -7,9 +7,7 @@ export default () => {
 
   const onChange = (page: number): void => {
     setCurrent(page);
-  }
+  };
 
-  return (
-    <Pagination total={150} pageSize={10} onChange={onChange} current={current} />
-  );
-}
+  return <Pagination total={150} pageSize={10} onChange={onChange} current={current} />;
+};

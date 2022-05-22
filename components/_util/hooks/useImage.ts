@@ -10,14 +10,16 @@ export default function useImage({ src, fallback }: { src: string; fallback?: st
   const [imgSrc, setImgSrc] = useState<string | undefined>();
 
   useIsomorphicEffect(() => {
-    imgPromise(src).then(() => {
-      setImgSrc(src);
-      setLoading(false);
-    }).catch(() => {
-      fallback && setImgSrc(fallback);
-      setLoading(false);
-    })
-  }, [])
+    imgPromise(src)
+      .then(() => {
+        setImgSrc(src);
+        setLoading(false);
+      })
+      .catch(() => {
+        fallback && setImgSrc(fallback);
+        setLoading(false);
+      });
+  }, []);
 
   return { loading, src: imgSrc };
 }

@@ -10,11 +10,11 @@ const Popover: FC<PopoverProps> = ({ title, content, placement = 'left', childre
   const elem = React.cloneElement(children, {
     className: 'popover-children',
     onMouseOver: () => setVisible(true),
-    onMouseOut: () => setVisible(false)
+    onMouseOut: () => setVisible(false),
   });
 
   const classes = classNames('popover-container', `${placement}`, {
-    hide: !visible
+    hide: !visible,
   });
 
   return (

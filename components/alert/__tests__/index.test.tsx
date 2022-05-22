@@ -13,7 +13,7 @@ describe('<Alert />', () => {
 
     const { getByText } = render(
       <>
-        {types.map(t => (
+        {types.map((t) => (
           <Alert type={t} key={t}>
             {t}
           </Alert>
@@ -21,7 +21,7 @@ describe('<Alert />', () => {
       </>,
     );
 
-    types.forEach(t => {
+    types.forEach((t) => {
       expect(getByText(t)).toMatchSnapshot();
     });
   });

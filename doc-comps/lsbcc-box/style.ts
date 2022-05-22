@@ -20,12 +20,12 @@ export const StyledContainer = styled.div`
 
     &::before,
     &::after {
-      content: '';
       position: relative;
       display: table-cell;
+      border-top: 1px solid #e8e8e8;
       transform: translateY(50%);
       content: '';
-      border-top: 1px solid #e8e8e8;
+      content: '';
     }
 
     &::before {
@@ -34,8 +34,8 @@ export const StyledContainer = styled.div`
     }
 
     &::after {
-      width: 95%;
       top: 50%;
+      width: 95%;
       width: 95%;
     }
 
@@ -44,37 +44,37 @@ export const StyledContainer = styled.div`
       padding: 0 10px;
       font-weight: 500;
       font-size: 16px;
-      white-space: nowrap;
-      text-align: center;
       font-variant: tabular-nums;
       line-height: 1.5;
+      white-space: nowrap;
+      text-align: center;
     }
   }
 
   .divider {
-    margin: 0;
-    background: none;
-    border: dashed #e8e8e8;
-    border-width: 1px 0 0;
+    position: relative;
+    top: -0.06em;
     display: block;
     clear: both;
+    box-sizing: border-box;
     width: 100%;
     min-width: 100%;
     height: 1px;
-    position: relative;
-    top: -0.06em;
-    box-sizing: border-box;
+    margin: 0;
     padding: 0;
     font-size: 14px;
     font-variant: tabular-nums;
     line-height: 1.5;
     list-style: none;
+    background: none;
+    border: dashed #e8e8e8;
+    border-width: 1px 0 0;
     font-feature-settings: 'tnum';
   }
 
   .code-box-demo {
-    transition: all 0.2s;
     padding: 42px 24px 50px;
+    transition: all 0.2s;
   }
 
   .code-box-meta {
@@ -91,10 +91,10 @@ export const StyledContainer = styled.div`
   }
 
   .code-box-action {
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40px;
     font-size: 16px;
   }
 
@@ -104,26 +104,26 @@ export const StyledContainer = styled.div`
   }
 
   .container_editor_area {
-    border-top: 1px solid rgb(232, 232, 232);
     padding: 16px;
+    border-top: 1px solid rgb(232, 232, 232);
   }
 
   .container__editor {
-    font-variant-ligatures: common-ligatures;
     border-radius: 3px;
+    font-variant-ligatures: common-ligatures;
   }
 
   .container__editor textarea {
-    outline: 0;
     background-color: none;
+    outline: 0;
   }
 
   .button {
     display: inline-block;
     padding: 0 6px;
+    color: #fff;
     text-decoration: none;
     background: #000;
-    color: #fff;
   }
 
   .button:hover {

@@ -13,8 +13,8 @@ const title = 'Title';
 
 export default () => (
   <div className="App">
-    <Popover title={title} content={content} placement="right" >
+    <Popover title={title} content={content} placement="right">
       <button>Hover me</button>
     </Popover>
   </div>
-)
+);

@@ -9,7 +9,7 @@ describe('<Pagination />', () => {
     const { container } = render(
       <Pagination pageSize={10} onChange={console.log} current={current}>
         <button>left</button>
-      </Pagination>
+      </Pagination>,
     );
     expect(container).toMatchSnapshot();
   });

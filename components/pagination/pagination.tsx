@@ -115,13 +115,14 @@ const Pagination: React.FC<PaginationProps> = ({ pageSize, total = 0, onChange, 
               className={pageClasses}
               key={index + totalPagesCount - 9 + 3}
               onClick={(): void => {
-                activePage !== index + totalPagesCount - 9 + 3 && onChange(index + totalPagesCount - 9 + 3);
+                activePage !== index + totalPagesCount - 9 + 3 &&
+                  onChange(index + totalPagesCount - 9 + 3);
               }}
             >
               <span>{index + totalPagesCount - 9 + 3}</span>
             </li>
           );
-        })
+        }),
       );
       // 只显示右侧省略号的情况
     } else if (current - 4 <= 1) {
@@ -159,7 +160,7 @@ const Pagination: React.FC<PaginationProps> = ({ pageSize, total = 0, onChange, 
             }}
           >
             <span>{totalPagesCount}</span>
-          </li>
+          </li>,
         );
       // 左右省略号都显示的情况
     } else {
@@ -207,7 +208,7 @@ const Pagination: React.FC<PaginationProps> = ({ pageSize, total = 0, onChange, 
           }}
         >
           <span>{totalPagesCount}</span>
-        </li>
+        </li>,
       );
     }
     return contentList;

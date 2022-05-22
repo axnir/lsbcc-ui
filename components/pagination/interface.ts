@@ -10,6 +10,6 @@ export interface PaginationProps {
   onChange(page: number): void;
 }
 
-export type OmitPageProps  = {
+export type OmitPageProps = {
   onClick: MouseEventHandler<HTMLElement>;
-}
+};
