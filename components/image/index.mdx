@@ -1,0 +1,29 @@
+---
+name: Image 图片
+route: /Image
+menu: 组件
+---
+
+import { LsbccBox } from '../../doc-comps';
+import BasicDemo from './demo';
+import BasicDemoCode from '!raw-loader!./demo';
+
+# Image 图片
+
+展示图片。
+
+## 代码演示
+
+### 基本用法
+
+<LsbccBox code={BasicDemoCode} title="基本用法" desc="与 img 标签相似，加入 fallback 和加载动画">
+ <BasicDemo />
+</LsbccBox>
+
+## API
+
+|    属性   | 说明     | 类型            | 默认值 |
+| -------- | -------- | -------------- | ------ |
+|  src   | 图片 |     string      |    -   |
+|  loader | 可选，加载过程占位元素 |    ReactNode    |    -   |
+| fallback  | 可选，加载失败的兜底图片 |  string |    -   |
