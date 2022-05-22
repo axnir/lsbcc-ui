@@ -1,6 +1,6 @@
 export type Placement = 'top' | 'right' | 'bottom' | 'left';
 
-export type PopoverProps = {
+export interface PopoverProps {
   title: string;
   content: React.ReactNode;
   placement?: Placement;

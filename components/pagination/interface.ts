@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react';
 
-export type PaginationProps  = {
+export interface PaginationProps {
   /**
    * Set this to change page
    */
