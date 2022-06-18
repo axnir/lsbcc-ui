@@ -1,12 +1,10 @@
 ---
-title: Popover 气泡卡片
 nav:
-  path: /popover
   title: 组件
+  path: /components
   order: 2
 group:
-  title: 基础组件
-  order: 1
+  title: 组件
 ---
 
 # Popover 气泡卡片

@@ -1,12 +1,10 @@
 ---
-title: Pagination 分页器
 nav:
-  path: /pagination
   title: 组件
+  path: /components
   order: 2
 group:
-  title: 基础组件
-  order: 1
+  title: 组件
 ---
 
 # Pagination 分页器
