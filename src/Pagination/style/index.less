@@ -1,0 +1,47 @@
+@popupPrefix: lsbcc-pagination;
+
+.@{popupPrefix} {
+  .pages-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    padding: 0;
+
+    li:hover {
+      transform: scale(1.1);
+      background-color: #f4f6f8;
+    }
+
+    .page {
+      flex: 0 1 auto;
+      height: 34px;
+      line-height: 34px;
+      cursor: pointer;
+      min-width: 36px;
+      min-height: 28px;
+      display: inline-block;
+      padding: 0 10px;
+      margin: 0 4px;
+      font-size: 14px;
+      text-align: center;
+      color: #606266;
+      border: 1px solid #ebebeb;
+      background-color: #fff;
+      border-radius: 2px;
+      box-sizing: border-box;
+
+      span {
+        user-select: none;
+      }
+
+      &.active {
+        background-color: #4a96ff;
+        color: #fff;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
