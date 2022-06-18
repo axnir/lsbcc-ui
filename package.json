@@ -17,9 +17,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:update": "jest --updateSnapshot",
-    "new": "plop --plopfile ./scripts/plopfile.ts",
-    "postnew": "prettier --write src/**/*{ts,tsx} --loglevel silent"
+    "test:update": "jest --updateSnapshot"
   },
   "keywords": [],
   "author": "",

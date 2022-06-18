@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
-let base: string | undefined = '/lsbcc-ui';
-let publicPath: string | undefined = '/lsbcc-ui/';
+let base: string | undefined = '/';
+let publicPath: string | undefined = '/';
 
 if (process.env.SITE_BUILD_ENV === 'PREVIEW') {
   base = undefined;
