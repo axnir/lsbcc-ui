@@ -2,7 +2,7 @@ import React from 'react';
 import Image from '..';
 import '../style';
 
-const src = 'https://www.xxx.com/xxx.png';
+const src = 'https://www.baidu.com/xxx.png';
 const fallback = 'https://s3.bmp.ovh/imgs/2022/05/22/8ea163c9c334972e.jpg';
 
 export default () => (
