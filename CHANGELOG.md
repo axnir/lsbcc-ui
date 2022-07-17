@@ -1,3 +1,12 @@
+## [0.0.2](https://github.com/axnir/lsbcc-ui/compare/v0.0.1...v0.0.2) (2022-07-17)
+
+
+### Bug Fixes
+
+* fix 'Could not resolve "classnames"' issue ([6a611b3](https://github.com/axnir/lsbcc-ui/commit/6a611b3457df82995a8a29971520fcb807fb877f))
+
+
+
 ## 0.0.1 (2022-07-17)
 
 
