@@ -17,7 +17,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:update": "jest --updateSnapshot"
+    "test:update": "jest --updateSnapshot",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "keywords": [],
   "author": "",
