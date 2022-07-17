@@ -20,9 +20,21 @@
     "test:update": "jest --updateSnapshot",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axnir/lsbcc-ui.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "react-component"
+  ],
+  "author": "iizuozuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axnir/lsbcc-ui/issues"
+  },
+  "homepage": "https://github.com/axnir/lsbcc-ui#readme",
   "files": [
     "lib",
     "esm"
@@ -46,7 +58,6 @@
     "@typescript-eslint/parser": "^5.28.0",
     "@umijs/fabric": "^2.5.13",
     "babel-plugin-import": "^1.13.5",
-    "classnames": "^2.3.1",
     "commitizen": "^4.2.4",
     "cpr": "^3.0.1",
     "cross-env": "^7.0.3",
@@ -101,6 +112,11 @@
     }
   },
   "dependencies": {
-    "@babel/runtime": "^7.14.0"
+    "@babel/runtime": "^7.14.0",
+    "classnames": "^2.3.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   }
 }
