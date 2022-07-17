@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import Button from '../button';
+import { ButtonProps } from '../interface';
 
 describe('<Popover />', () => {
   test('should render default', () => {
@@ -8,21 +9,49 @@ describe('<Popover />', () => {
     expect(container).toMatchSnapshot();
   });
 
-  // test('should render button', () => {
-  //   const placements: any[] = ['top', 'right', 'bottom', 'left'];
+  test('should render button with type', () => {
+    const types: ButtonProps['type'][] = ['default', 'primary'];
 
-  //   const { getByText } = render(
-  //     <>
-  //       {placements.map((t) => (
-  //         <Popover key={t} placement={t} title={title} content={content}>
-  //           <button>{t}</button>
-  //         </Popover>
-  //       ))}
-  //     </>,
-  //   );
+    const { getByText } = render(
+      <>
+        {types.map((t) => (
+          <Button key={t} type={t}>
+            {t}
+          </Button>
+        ))}
+      </>,
+    );
 
-  //   placements.forEach((t) => {
-  //     expect(getByText(t)).toMatchSnapshot();
-  //   });
+    types.forEach((t) => {
+      t && expect(getByText(t)).toMatchSnapshot();
+    });
+  });
+
+  test('should render button with size', () => {
+    const types: ButtonProps['size'][] = ['large', 'middle', 'small'];
+
+    const { getByText } = render(
+      <>
+        {types.map((t) => (
+          <Button key={t} size={t}>
+            {t}
+          </Button>
+        ))}
+      </>,
+    );
+
+    types.forEach((t) => {
+      t && expect(getByText(t)).toMatchSnapshot();
+    });
+  });
+
+  test('should render button with disabled', () => {
+    const { container } = render(
+      <>
+        <Button disabled>disabled</Button>
+      </>,
+    );
+
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Popover /> should render button with disabled 1`] = `
+<div>
+  <button
+    class="lsbcc-button disabled"
+    type="button"
+  >
+    <span
+      class="btn-name"
+    >
+      disabled
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Popover /> should render button with size 1`] = `
+<span
+  class="btn-name"
+>
+  large
+</span>
+`;
+
+exports[`<Popover /> should render button with size 2`] = `
+<span
+  class="btn-name"
+>
+  middle
+</span>
+`;
+
+exports[`<Popover /> should render button with size 3`] = `
+<span
+  class="btn-name"
+>
+  small
+</span>
+`;
+
+exports[`<Popover /> should render button with type 1`] = `
+<span
+  class="btn-name"
+>
+  default
+</span>
+`;
+
+exports[`<Popover /> should render button with type 2`] = `
+<span
+  class="btn-name"
+>
+  primary
+</span>
+`;
+
+exports[`<Popover /> should render default 1`] = `
+<div>
+  <button
+    class="lsbcc-button"
+    type="button"
+  >
+    <span
+      class="btn-name"
+    >
+      button
+    </span>
+  </button>
+</div>
+`;

@@ -10,21 +10,8 @@ describe('<Image />', () => {
     expect(container).toMatchSnapshot();
   });
 
-  // test('should render image', () => {
-  //   const placements: any[] = ['top', 'right', 'bottom', 'left'];
-
-  //   const { getByText } = render(
-  //     <>
-  //       {placements.map(t => (
-  //         <Popover key={t} placement={t} title={title} content={content}>
-  //           <button>{t}</button>
-  //         </Popover>
-  //       ))}
-  //     </>,
-  //   );
-
-  // placements.forEach(t => {
-  //   expect(getByText(t)).toMatchSnapshot();
-  // });
-  // });
+  test('should render image fallback', () => {
+    const { container } = render(<Image src="undefined" fallback={src} />);
+    expect(container).toMatchSnapshot();
+  });
 });

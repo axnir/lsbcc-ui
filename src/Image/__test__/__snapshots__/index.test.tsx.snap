@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image /> should render default 1`] = `
+<div>
+  <div
+    class="lsbcc-image"
+  >
+    <div
+      class="img-skeletion"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Image /> should render image fallback 1`] = `
+<div>
+  <div
+    class="lsbcc-image"
+  >
+    <div
+      class="img-skeletion"
+    />
+  </div>
+</div>
+`;
